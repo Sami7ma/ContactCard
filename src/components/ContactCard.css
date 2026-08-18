@@ -8,9 +8,7 @@
   transition: 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-}
+
 
 .avatar {
   width: 90px;
@@ -48,35 +46,38 @@ h1 {
   text-decoration: none;
   color: #111827;
   background: #f9fafb;
+  border: 1px solid #f0f2f5;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
-  overflow: hidden;
-  transition: 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .icon-box svg {
   font-size: 1.3rem;
   min-width: 24px;
+  flex-shrink: 0;
 }
 
 .icon-box span {
-  opacity: 0;
-  width: 0;
+  opacity: 1;
+  width: auto;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: 0.3s;
 }
 
 .icon-box:hover {
   background: #111827;
   color: white;
-}
-
-.icon-box:hover span {
-  opacity: 1;
-  width: auto;
+  border-color: #111827;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15);
 }
 
 .card::after {
