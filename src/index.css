@@ -1,0 +1,15 @@
+/* Design tokens, parchment (Birana) and dark themes: same palette as the portfolio */
+:root{--bg:#ecdcb4;--ink:#2a1c0e;--muted:#6d5636;--line:#c9b080;--accent:#7a1c2e;--shadow:#7a1c2e;--edge:var(--ink);--tile:rgba(255,248,230,.55);--grain:.35;
+--serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--geez:'Noto Serif Ethiopic',serif;
+--ok:#0a7a2f;--g:#078930;--y:#fcdd09;--r:#da121a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0)}
+:root[data-theme=dark]{--bg:#0f0f0e;--ink:#f1efe8;--muted:#97948a;--line:#2a2927;--accent:#d4808f;--shadow:#6b2433;--edge:#3a2c28;--tile:#181816;--grain:0;--ok:#3ddc84}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]):not([data-theme=dark]){--bg:#0f0f0e;--ink:#f1efe8;--muted:#97948a;--line:#2a2927;--accent:#d4808f;--shadow:#6b2433;--edge:#3a2c28;--tile:#181816;--grain:0}}
+:root{--gold:linear-gradient(135deg,#b08d57,#7d5d27)}
+:root[data-theme=dark]{--gold:linear-gradient(135deg,#f4e5b6,#c9a45c 50%,#8f6b2e)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]):not([data-theme=dark]){--gold:linear-gradient(135deg,#f4e5b6,#c9a45c 50%,#8f6b2e)}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:var(--grain);background:radial-gradient(ellipse at 50% 30%,transparent 45%,rgba(110,70,25,.35)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .22 0 0 0 0 .08 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
